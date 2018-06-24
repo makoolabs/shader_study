@@ -1,4 +1,4 @@
-﻿Shader "Unlit/first"{
+﻿Shader "Unlit/Jelly Effect"{
 	SubShader{
 		Pass{
 			CGPROGRAM

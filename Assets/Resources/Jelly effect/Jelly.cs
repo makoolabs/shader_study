@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class first : MonoBehaviour {
+public class Jelly : MonoBehaviour {
 	public MeshFilter mesh;
 	public Transform[] trans;
 	public LineRenderer line;
@@ -16,8 +16,8 @@ public class first : MonoBehaviour {
 		for(var i = 0;i<trans.Length;i++){
 			var tran = trans[i];
 			var pos = tran.localPosition;
-			var s = Mathf.Cos(t*3)/50;
-			var c = Mathf.Sin(t*3)/50;
+			var s = sign(pos.x)*Mathf.Cos(t*3)/50;
+			var c = sign(pos.y)*Mathf.Sin(t*3)/50;
 			pos.x += s;
 			pos.y += c;
 			tran.localPosition = pos;
