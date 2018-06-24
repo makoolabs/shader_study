@@ -13,6 +13,8 @@
 			};
 			v2f vert(appdata IN){
 				v2f o;
+				IN.pos.x += sign(IN.pos.x)*sin(_Time.w)/50;
+				IN.pos.y += sign(IN.pos.y)*cos(_Time.w)/50;
 				o.pos = UnityObjectToClipPos(IN.pos);
 				return o;
 			}
@@ -23,3 +25,6 @@
 		}
 	}
 }
+//sin(0) = 0  sin(90)=1  sin(180) =0 sin(270)=-1 sin(360)=0
+//cos(0) = 1 cos(90) = 0 cos(180) = 1 cos(270) = 0 cos(360) =1
+// pos.x + 
